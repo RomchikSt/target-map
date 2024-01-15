@@ -5,6 +5,10 @@ import { mapButtonVarints } from "../animations/variants";
 import { useSelector } from "react-redux";
 import { selectZoom } from "../features/map/mapSelectors";
 
+type StyledButtonProps = {
+  $zoom: boolean;
+};
+
 const ButtonContainer = styled(motion.div)`
   position: absolute;
   display: flex;
@@ -22,7 +26,7 @@ const ButtonContainer = styled(motion.div)`
   transition: all 0.3s ease-in-out;
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<StyledButtonProps>`
   height: 3.9rem;
   border: none;
   background-color: ${(props) => (props.$zoom ? "#d3d3d3" : "#fef2f2")};

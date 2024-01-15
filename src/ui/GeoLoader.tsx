@@ -12,7 +12,6 @@ function GeoLoader() {
         visible={true}
         height="30"
         width="30"
-        colors={{ 1: "#000000", 2: "#000000", 3: "#000000" }}
         ariaLabel="radio-loading"
         wrapperStyle={{}}
         wrapperClass="
