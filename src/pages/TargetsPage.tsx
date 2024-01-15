@@ -51,7 +51,7 @@ function TargetsPage() {
   const [isFetchingLocation, setIsFetchingLocation] = useState<boolean>(false);
 
   const handleChangeLanguage = () => {
-    i18n.changeLanguage(language === "ua" ? "en" : "ua");
+    i18n.changeLanguage(language === "ua" ? "ua" : "en");
     if (language === "ua") dispatch(setChangeLanguage("en"));
     else dispatch(setChangeLanguage("ua"));
   };
@@ -114,8 +114,8 @@ function TargetsPage() {
         onClick={handleChangeLanguage}
       >
         <StyledImage
-          src={language === "ua" ? "img/uaFlag.webp" : "img/ukFlag.webp"}
-          alt={language === "ua" ? "Ukrainina flag" : "UK flag"}
+          src={language === "ua" ? "img/ukFlag.webp" : "img/uaFlag.webp"}
+          alt={language === "ua" ? "UK flag" : "Ukrainina flag"}
         />
       </StandartMapButton>
       <StandartMapButton
