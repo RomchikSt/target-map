@@ -27,7 +27,7 @@ const ModalContainer = styled.div`
   overflow-y: auto;
 `;
 
-function ModalWindow({ children, onClick }: ModalWindowProps) {
+function ModalWindow({ /* children, */ onClick }: ModalWindowProps) {
   const handleModalContainerClick = (e: React.MouseEvent) => {
     e.stopPropagation();
   };
