@@ -41,7 +41,7 @@ const StyledImage = styled.img`
 `;
 
 function TargetsPage() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const dispatch = useDispatch();
   const language = useSelector(selectLanguage);
   const zoom = useSelector(selectZoom);
@@ -110,6 +110,7 @@ function TargetsPage() {
       <StandartMapButton
         top={"3rem"}
         right={"2rem"}
+        zIndex={settingsOpen || infoOpen ? 9999 : 1000}
         onClick={handleChangeLanguage}
       >
         <StyledImage
@@ -125,7 +126,7 @@ function TargetsPage() {
       >
         <FaInfo size={"2.2rem"} />
       </StandartMapButton>
-      {infoOpen && <ModalWindow onClick={handleOpenInfo} />}
+      {infoOpen && <ModalWindow onClick={handleOpenInfo} header={"Info"} />}
       <StandartMapButton
         zIndex={settingsOpen ? 9999 : 1000}
         bottom={"17rem"}
@@ -134,7 +135,9 @@ function TargetsPage() {
       >
         <LuSettings2 size={"2.2rem"} />
       </StandartMapButton>
-      {settingsOpen && <ModalWindow onClick={handleOpenSettings} />}
+      {settingsOpen && (
+        <ModalWindow onClick={handleOpenSettings} header={t("settings")} />
+      )}
       <StandartMapButton
         bottom={"12rem"}
         right={"2rem"}

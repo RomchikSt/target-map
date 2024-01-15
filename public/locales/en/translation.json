@@ -1,3 +1,16 @@
 {
-  "search": "Search..."
+  "search": "Search...",
+  "settings": "Settings",
+  "mainTarget": "Main target",
+  "comandCenter": "Comand center",
+  "armyBase": "Army base",
+  "navalBase": "Naval base",
+  "airbase": "Air base",
+  "militaryFactory": "Military factory",
+  "researchFacility": "Research facility",
+  "airfield": "Airfield",
+  "port": "Port",
+  "energyFacility": "Energy facility",
+  "oilAndGasFacility": "Oil and Gas facility",
+  "otherTargets": "Other targets"
 }

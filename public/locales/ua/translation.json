@@ -1,3 +1,16 @@
 {
-  "search": "Пошук..."
+  "search": "Пошук...",
+  "settings": "Налаштування",
+  "mainTarget": "Головна ціль",
+  "comandCenter": "Командний пункт",
+  "armyBase": "Військова наземна база",
+  "navalBase": "Військово-морська база",
+  "airbase": "Військово-повітряна база",
+  "militaryFactory": "Військова фабрика",
+  "researchFacility": "Дослідницький центр",
+  "airfield": "Аеродром",
+  "port": "Порт",
+  "energyFacility": "Енергетичний об'єкт",
+  "oilAndGasFacility": "Нафтогазовий об'єкт",
+  "otherTargets": "Інші цілі"
 }

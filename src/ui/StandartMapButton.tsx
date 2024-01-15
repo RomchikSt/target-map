@@ -15,7 +15,8 @@ const StyledButton = styled(motion.button)`
   align-items: center;
   border: 1px solid #111111;
   box-shadow: 0 0.4rem 1.2rem #111111;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.1s ease-in-out, border 0.3s ease-in-out,
+    scale 0.3s ease-in-out, background-color 0.1s ease-in-out;
 
   &:hover {
     scale: 1.1;
