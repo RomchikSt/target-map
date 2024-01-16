@@ -18,7 +18,7 @@ import { FaSearch } from "react-icons/fa";
 import { AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import ModalWindow from "../ui/ModalWindow";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GeoLoader from "../ui/GeoLoader";
 import { GiNuclearBomb } from "react-icons/gi";
 
@@ -44,8 +44,13 @@ function TargetsPage() {
   const settingsOpen = useSelector(selectSettings);
   const [isFetchingLocation, setIsFetchingLocation] = useState<boolean>(false);
 
+  useEffect(() => {
+    const currentLang = i18n.language;
+    dispatch(mapActions.setChangeLanguage(currentLang));
+  }, []);
+
   const handleChangeLanguage = () => {
-    i18n.changeLanguage(language === "ua" ? "ua" : "en");
+    i18n.changeLanguage(language === "ua" ? "en" : "ua");
     if (language === "ua") dispatch(mapActions.setChangeLanguage("en"));
     else dispatch(mapActions.setChangeLanguage("ua"));
   };
@@ -112,7 +117,7 @@ function TargetsPage() {
         onClick={handleChangeLanguage}
       >
         <StyledImage
-          src={language === "ua" ? "img/ukFlag.webp" : "img/uaFlag.webp"}
+          src={language === "ua" ? "img/uaFlag.webp" : "img/ukFlag.webp"}
           alt={language === "ua" ? "UK flag" : "Ukrainina flag"}
         />
       </StandartMapButton>
