@@ -40,14 +40,11 @@ export const mapSlice = createSlice({
     setPosition: (state, action: PayloadAction<[number, number]>) => {
       state.position = action.payload;
     },
+    setResetPosition: (state) => {
+      state.position = [55.751244, 37.618423];
+      state.zoom = 10;
+    },
   },
 });
 
-export const {
-  setZoom,
-  setFilter,
-  setChangeLanguage,
-  setInfo,
-  setSettings,
-  setPosition,
-} = mapSlice.actions;
+export const { ...mapActions } = mapSlice.actions;

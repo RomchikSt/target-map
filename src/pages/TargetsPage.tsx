@@ -11,14 +11,7 @@ import {
 } from "../features/map/mapSelectors";
 import { useDispatch, useSelector } from "react-redux";
 import { FaInfo, FaLocationArrow } from "react-icons/fa";
-import {
-  setChangeLanguage,
-  setFilter,
-  setInfo,
-  setSettings,
-  setZoom,
-  setPosition,
-} from "../features/map/mapSlice";
+import { mapActions } from "../features/map/mapSlice";
 import { LuSettings2 } from "react-icons/lu";
 import SearchInput from "../ui/SearchInput";
 import { FaSearch } from "react-icons/fa";
@@ -27,6 +20,8 @@ import { useTranslation } from "react-i18next";
 import ModalWindow from "../ui/ModalWindow";
 import { useState } from "react";
 import GeoLoader from "../ui/GeoLoader";
+import { GiNuclearBomb } from "react-icons/gi";
+import { MdLocationOff } from "react-icons/md";
 
 const PageContainer = styled.div`
   position: relative;
@@ -52,28 +47,32 @@ function TargetsPage() {
 
   const handleChangeLanguage = () => {
     i18n.changeLanguage(language === "ua" ? "ua" : "en");
-    if (language === "ua") dispatch(setChangeLanguage("en"));
-    else dispatch(setChangeLanguage("ua"));
+    if (language === "ua") dispatch(mapActions.setChangeLanguage("en"));
+    else dispatch(mapActions.setChangeLanguage("ua"));
   };
 
   const handleZoomPlus = () => {
-    if (zoom < 18 && zoom >= 3) dispatch(setZoom(zoom + 1));
+    if (zoom < 18 && zoom >= 3) dispatch(mapActions.setZoom(zoom + 1));
   };
 
   const handleZoomMinus = () => {
-    if (zoom <= 18 && zoom > 3) dispatch(setZoom(zoom - 1));
+    if (zoom <= 18 && zoom > 3) dispatch(mapActions.setZoom(zoom - 1));
   };
 
   const handleOpenSearch = () => {
-    dispatch(setFilter(!searchOpen));
+    dispatch(mapActions.setFilter(!searchOpen));
   };
 
   const handleOpenInfo = () => {
-    dispatch(setInfo(!infoOpen));
+    dispatch(mapActions.setInfo(!infoOpen));
   };
 
   const handleOpenSettings = () => {
-    dispatch(setSettings(!settingsOpen));
+    dispatch(mapActions.setSettings(!settingsOpen));
+  };
+
+  const handleResetPosition = () => {
+    dispatch(mapActions.setResetPosition());
   };
 
   function handleGetLocation() {
@@ -82,7 +81,7 @@ function TargetsPage() {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          dispatch(setPosition([latitude, longitude]));
+          dispatch(mapActions.setPosition([latitude, longitude]));
           setIsFetchingLocation(false);
           console.log("Your current location:", [latitude, longitude]);
         },
@@ -127,6 +126,21 @@ function TargetsPage() {
         <FaInfo size={"2.2rem"} />
       </StandartMapButton>
       {infoOpen && <ModalWindow onClick={handleOpenInfo} header={"Info"} />}
+      <StandartMapButton zIndex={1000} bottom={"27rem"} right={"2rem"}>
+        <GiNuclearBomb size={"2.8rem"} />
+      </StandartMapButton>
+      <StandartMapButton
+        zIndex={1000}
+        bottom={"22rem"}
+        right={"2rem"}
+        onClick={handleResetPosition}
+      >
+        <img
+          src="https://raw.githubusercontent.com/RomchikSt/full-portfolio/master/Websites/target-map/public/img/mainTarget.png"
+          height={"28rem"}
+          width={"28rem"}
+        ></img>
+      </StandartMapButton>
       <StandartMapButton
         zIndex={settingsOpen ? 9999 : 1000}
         bottom={"17rem"}

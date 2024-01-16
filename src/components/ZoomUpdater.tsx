@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useMap } from "react-leaflet";
 import { useDispatch, useSelector } from "react-redux";
-import { setZoom } from "../features/map/mapSlice";
+import { mapActions } from "../features/map/mapSlice";
 import { selectZoom } from "../features/map/mapSelectors";
 
 function ZoomUpdater() {
@@ -12,7 +12,7 @@ function ZoomUpdater() {
   useEffect(() => {
     const updateZoomInRedux = () => {
       const newZoom = map.getZoom();
-      dispatch(setZoom(newZoom));
+      dispatch(mapActions.setZoom(newZoom));
     };
     map.setZoom(zoom);
     map.on("zoomend", updateZoomInRedux);
