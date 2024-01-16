@@ -21,7 +21,6 @@ import ModalWindow from "../ui/ModalWindow";
 import { useState } from "react";
 import GeoLoader from "../ui/GeoLoader";
 import { GiNuclearBomb } from "react-icons/gi";
-import { MdLocationOff } from "react-icons/md";
 
 const PageContainer = styled.div`
   position: relative;
