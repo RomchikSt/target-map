@@ -47,7 +47,7 @@ function TargetsPage() {
   useEffect(() => {
     const currentLang = i18n.language;
     dispatch(mapActions.setChangeLanguage(currentLang));
-  }, []);
+  }, [i18n.language, dispatch]);
 
   const handleChangeLanguage = () => {
     i18n.changeLanguage(language === "ua" ? "en" : "ua");
@@ -151,14 +151,14 @@ function TargetsPage() {
           width={"28rem"}
         ></img>
       </StandartMapButton>
-      <StandartMapButton
+      {/* <StandartMapButton
         zIndex={settingsOpen ? 9999 : 1000}
         bottom={"17rem"}
         right={"2rem"}
         onClick={handleOpenSettings}
       >
         <LuSettings2 size={"2.2rem"} />
-      </StandartMapButton>
+      </StandartMapButton> */}
       {/* {settingsOpen && (
         <ModalWindow onClick={handleOpenSettings} header={t("settings")} />
       )} */}
