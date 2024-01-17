@@ -1,6 +1,7 @@
 {
   "search": "Пошук...",
   "infoHeader": "Target Map",
+  "infoDesc": "На цій карті зображені військові цілі, які підлягають знищенню на території Росії.",
   "settings": "Налаштування",
   "mainTarget": "Головна ціль",
   "comandCenter": "Командний пункт",
@@ -11,7 +12,6 @@
   "researchFacility": "Дослідницький центр",
   "airfield": "Аеродром",
   "port": "Порт",
-  "energyFacility": "Енергетичний об'єкт",
   "oilAndGasFacility": "Нафтогазовий об'єкт",
   "otherTargets": "Інші цілі"
 }

@@ -130,7 +130,11 @@ function TargetsPage() {
         <FaInfo size={"2.2rem"} />
       </StandartMapButton>
       {infoOpen && (
-        <ModalWindow onClick={handleOpenInfo} header={t("infoHeader")} />
+        <ModalWindow
+          onClick={handleOpenInfo}
+          header={t("infoHeader")}
+          text={t("infoDesc")}
+        />
       )}
       <StandartMapButton zIndex={1000} bottom={"27rem"} right={"2rem"}>
         <GiNuclearBomb size={"2.8rem"} />

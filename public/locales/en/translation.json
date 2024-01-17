@@ -1,6 +1,7 @@
 {
   "search": "Search...",
   "infoHeader": "Target Map",
+  "infoDesc": "This map shows military targets to be destroyed on the territory of russia.",
   "settings": "Settings",
   "mainTarget": "Main target",
   "comandCenter": "Comand center",
@@ -11,7 +12,6 @@
   "researchFacility": "Research facility",
   "airfield": "Airfield",
   "port": "Port",
-  "energyFacility": "Energy facility",
   "oilAndGasFacility": "Oil and Gas facility",
   "otherTargets": "Other targets"
 }
