@@ -17,7 +17,7 @@ import SearchInput from "../ui/SearchInput";
 import { FaSearch } from "react-icons/fa";
 import { AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import ModalWindow from "../ui/ModalWindow";
+import InfoModalWindow from "../ui/InfoModalWindow";
 import { useEffect, useState } from "react";
 import GeoLoader from "../ui/GeoLoader";
 import { GiNuclearBomb } from "react-icons/gi";
@@ -130,7 +130,7 @@ function TargetsPage() {
         <FaInfo size={"2.2rem"} />
       </StandartMapButton>
       {infoOpen && (
-        <ModalWindow
+        <InfoModalWindow
           onClick={handleOpenInfo}
           header={t("infoHeader")}
           text={t("infoDesc")}
@@ -159,9 +159,9 @@ function TargetsPage() {
       >
         <LuSettings2 size={"2.2rem"} />
       </StandartMapButton>
-      {settingsOpen && (
+      {/* {settingsOpen && (
         <ModalWindow onClick={handleOpenSettings} header={t("settings")} />
-      )}
+      )} */}
       <StandartMapButton
         bottom={"12rem"}
         right={"2rem"}

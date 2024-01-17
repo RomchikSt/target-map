@@ -69,7 +69,7 @@ const StyledTargetsRow = styled.div`
   gap: 0.5rem;
 `;
 
-function ModalWindow({ header, onClick, text }: ModalWindowProps) {
+function InfoModalWindow({ header, onClick, text }: ModalWindowProps) {
   const { t } = useTranslation();
   const handleModalContainerClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -150,4 +150,4 @@ function ModalWindow({ header, onClick, text }: ModalWindowProps) {
   );
 }
 
-export default ModalWindow;
+export default InfoModalWindow;
