@@ -95,9 +95,9 @@ function ModalWindow({ header, onClick, text }: ModalWindowProps) {
             </RowStyled>
             <RowStyled>
               <img
-                src="./img/navalBase.png"
-                height={"30rem"}
-                width={"30rem"}
+                src="https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/navalBase.webp"
+                height={"24rem"}
+                width={"24rem"}
               ></img>
               <p> - {t("navalBase")}</p>
             </RowStyled>
@@ -110,6 +110,11 @@ function ModalWindow({ header, onClick, text }: ModalWindowProps) {
               <p> - {t("airbase")}</p>
             </RowStyled>
             <RowStyled>
+              <img
+                src="https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/militaryFactory.png"
+                height={"24rem"}
+                width={"24rem"}
+              ></img>
               <p> - {t("militaryFactory")}</p>
             </RowStyled>
             <RowStyled>
