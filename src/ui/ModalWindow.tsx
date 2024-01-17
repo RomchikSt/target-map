@@ -50,6 +50,8 @@ const StyledModalHeader = styled.div`
 
 const RowStyled = styled.div`
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 function ModalWindow({ header, onClick, text }: ModalWindowProps) {
@@ -68,6 +70,11 @@ function ModalWindow({ header, onClick, text }: ModalWindowProps) {
           </StyledModalHeader>
           <div>
             <RowStyled>
+              <img
+                src="https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/mainTarget.png"
+                height={"24rem"}
+                width={"24rem"}
+              ></img>
               <p> - {t("mainTarget")}</p>
             </RowStyled>
             <RowStyled>

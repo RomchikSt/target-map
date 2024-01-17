@@ -11,7 +11,7 @@ function Map() {
   const position = useSelector(selectPosition);
   const deathZoneIcon = new L.Icon({
     iconUrl:
-      "https://raw.githubusercontent.com/RomchikSt/full-portfolio/master/Websites/target-map/public/img/mainTarget.png",
+      "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/mainTarget.png",
     iconSize: [35, 35],
   });
 

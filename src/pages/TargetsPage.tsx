@@ -146,7 +146,7 @@ function TargetsPage() {
         onClick={handleResetPosition}
       >
         <img
-          src="https://raw.githubusercontent.com/RomchikSt/full-portfolio/master/Websites/target-map/public/img/mainTarget.png"
+          src="https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/mainTarget.png"
           height={"28rem"}
           width={"28rem"}
         ></img>
