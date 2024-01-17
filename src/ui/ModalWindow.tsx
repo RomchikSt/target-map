@@ -87,13 +87,18 @@ function ModalWindow({ header, onClick, text }: ModalWindowProps) {
             </RowStyled>
             <RowStyled>
               <img
-                src="https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/armyBase.png"
+                src="./img/armyBase.png"
                 height={"24rem"}
                 width={"24rem"}
               ></img>
               <p> - {t("armyBase")}</p>
             </RowStyled>
             <RowStyled>
+              <img
+                src="https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/navalBase.png"
+                height={"24rem"}
+                width={"24rem"}
+              ></img>
               <p> - {t("navalBase")}</p>
             </RowStyled>
             <RowStyled>
