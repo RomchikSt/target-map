@@ -142,6 +142,11 @@ function ModalWindow({ header, onClick, text }: ModalWindowProps) {
               <p> - {t("port")}</p>
             </RowStyled>
             <RowStyled>
+              <img
+                src="https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/oilAndGasFacilities.png"
+                height={"24rem"}
+                width={"24rem"}
+              ></img>
               <p> - {t("oilAndGasFacility")}</p>
             </RowStyled>
             <RowStyled>
