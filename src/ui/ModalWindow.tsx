@@ -47,13 +47,23 @@ const StyledModalHeader = styled.div`
   text-align: center;
   gap: 2rem;
 `;
-const StyledModalText = styled.div`
+const StyledMainTargetContainer = styled.div`
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 20rem;
+`;
+const StyledTargetContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
 `;
 
-const RowStyled = styled.div`
+const StyledTargetsRow = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -66,10 +76,6 @@ function ModalWindow({ header, onClick, text }: ModalWindowProps) {
   };
 
   const targets = [
-    {
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/mainTarget.png",
-      text: "mainTarget",
-    },
     {
       src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/commandCenter.png",
       text: "comandCenter",
@@ -120,14 +126,24 @@ function ModalWindow({ header, onClick, text }: ModalWindowProps) {
             <h2>{header}</h2>
             <p>{text}</p>
           </StyledModalHeader>
-          <StyledModalText>
+          <StyledMainTargetContainer>
+            <StyledTargetsRow>
+              <img
+                src="https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/mainTarget.png"
+                height={"24rem"}
+                width={"24rem"}
+              ></img>
+              <p> - {t("mainTarget")}</p>
+            </StyledTargetsRow>
+          </StyledMainTargetContainer>
+          <StyledTargetContainer>
             {targets.map((target) => (
-              <RowStyled>
+              <StyledTargetsRow>
                 <img src={target.src} height={"24rem"} width={"24rem"}></img>
                 <p> - {t(target.text)}</p>
-              </RowStyled>
+              </StyledTargetsRow>
             ))}
-          </StyledModalText>
+          </StyledTargetContainer>
         </StyledModalContainer>
       </ModalBox>
     </ModalBackground>
