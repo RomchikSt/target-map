@@ -1,49 +1,49 @@
 export const targetsImgInfo = [
   {
     //1
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/commandCenter.png",
+    src: "./img/commandCenter.png",
     text: "commandCenter",
   },
   {
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/researchFacility.png",
+    src: "./img/researchFacility.png",
     text: "researchFacility",
   },
   {
     //2
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/armyBase.png",
+    src: "./img/armyBase.png",
     text: "armyBase",
   },
   {
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/airField.png",
+    src: "./img/airField.png",
     text: "airfield",
   },
   {
     //3
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/navalBase.webp",
+    src: "./img/navalBase.webp",
     text: "navalBase",
   },
 
   {
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/port.png",
+    src: "./img/port.png",
     text: "port",
   },
   {
     //4
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/airBase.png",
-    text: "airbase",
+    src: "./img/airBase.png",
+    text: "airBase",
   },
 
   {
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/oilAndGasFacilities.png",
+    src: "./img/oilAndGasFacilities.png",
     text: "oilAndGasFacility",
   },
   {
     //5
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/militaryFactory.png",
+    src: "./img/militaryFactory.png",
     text: "militaryFactory",
   },
   {
-    src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/otherTarget.png",
+    src: "./img/otherTarget.png",
     text: "otherTargets",
   },
 ];

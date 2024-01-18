@@ -120,6 +120,7 @@ const StyledCloseButton = styled(IoIosCloseCircleOutline)`
 function InfoModalWindow({ header, onClick, text }: ModalWindowProps) {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+
   const handleModalContainerClick = (e: React.MouseEvent) => {
     e.stopPropagation();
   };

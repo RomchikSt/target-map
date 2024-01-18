@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaInfo } from "react-icons/fa";
 import { mapActions } from "../features/map/mapSlice";
 import { useTranslation } from "react-i18next";
-import InfoModalWindow from "../ui/InfoModalWindow";
+import InfoModalWindow from "./InfoModalWindow";
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 

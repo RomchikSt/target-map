@@ -1,5 +1,5 @@
 import StandartMapButton from "../ui/StandartMapButton";
-import ZoomButton from "../ui/ZoomButton";
+import ZoomButton from "./ZoomButton";
 import { selectZoom, selectSettings } from "../features/map/mapSelectors";
 import { useDispatch, useSelector } from "react-redux";
 import { FaLocationArrow } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { LuSettings2 } from "react-icons/lu";
 import { useState } from "react";
 import GeoLoader from "../ui/GeoLoader";
 import { GiNuclearBomb } from "react-icons/gi";
-import SettingsModalWindow from "../ui/SettingsModalWindow";
+import SettingsModalWindow from "./SettingsModalWindow";
 import { AnimatePresence } from "framer-motion";
 
 function BottomRightButtons() {

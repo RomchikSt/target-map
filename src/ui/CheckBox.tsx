@@ -53,11 +53,21 @@ const CheckboxWrapper = styled.div`
   }
 `;
 
-function CheckBox() {
+type CheckBoxProps = {
+  onChange: () => void;
+  isChecked: boolean;
+};
+
+function CheckBox({ onChange, isChecked }: CheckBoxProps) {
   return (
     <CheckboxWrapper>
       <label className="checkbox">
-        <input type="checkbox" className="checkbox__input" />
+        <input
+          type="checkbox"
+          className="checkbox__input"
+          onChange={onChange}
+          checked={isChecked}
+        />
         <span className="checkbox__label"></span>
       </label>
     </CheckboxWrapper>
