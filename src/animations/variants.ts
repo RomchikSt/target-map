@@ -14,3 +14,15 @@ export const searchInputVariants: animationVariants = {
   visible: { width: "25rem", opacity: 1, transition: { duration: 0.4 } },
   exit: { width: 0, opacity: 0, transition: { duration: 0.5 } },
 };
+
+export const InfoModalWindowVariants: animationVariants = {
+  hidden: { opacity: 0, transition: { duration: 0.3 } },
+  visible: { opacity: 1, transition: { duration: 0.3 } },
+  exit: { opacity: 0, transition: { duration: 0.3 } },
+};
+
+export const SettingsModalWindowVariants: animationVariants = {
+  hidden: { opacity: 1, y: "110%", transition: { duration: 0.3 } },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.3 } },
+  exit: { opacity: 1, y: "110%", transition: { duration: 0.3 } },
+};

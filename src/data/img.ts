@@ -1,8 +1,8 @@
-export const targetsImg = [
+export const targetsImgInfo = [
   {
     //1
     src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/commandCenter.png",
-    text: "comandCenter",
+    text: "commandCenter",
   },
   {
     src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/researchFacility.png",

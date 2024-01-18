@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { mapActions } from "../features/map/mapSlice";
 import { useDispatch } from "react-redux";
-import { targetsImg } from "../data/img";
+import { targetsImgInfo } from "../data/img";
 
 type ModalWindowProps = {
   onClick: () => void;
@@ -65,13 +65,25 @@ const StyledMainTargetContainer = styled.button`
 
   &:hover {
     scale: 1.05;
-    border: 1px solid #ff0000;
+    border: 1px solid #dc2626;
+    box-shadow: inset 0 0 0 0.2rem #dc2626;
   }
   &:active {
     scale: 0.95;
-    border: 1px solid #ff0000;
+    border: 1px solid #000;
   }
 `;
+
+const StyledImg = styled.img`
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.3s;
+
+  &:hover {
+    scale: 1.5;
+  }
+`;
+
 const StyledTargetContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -94,12 +106,13 @@ const StyledCloseButton = styled(IoIosCloseCircleOutline)`
   font-size: 3rem;
   color: #000;
   transition: all 0.3s;
+  border-radius: 50%;
   &:hover {
-    color: #ff0000;
+    color: #dc2626;
     scale: 1.1;
   }
   &:active {
-    color: #ff0000;
+    color: #000;
     scale: 0.9;
   }
 `;
@@ -136,9 +149,9 @@ function InfoModalWindow({ header, onClick, text }: ModalWindowProps) {
             </StyledTargetsRow>
           </StyledMainTargetContainer>
           <StyledTargetContainer>
-            {targetsImg.map((target) => (
+            {targetsImgInfo.map((target) => (
               <StyledTargetsRow key={target.text}>
-                <img src={target.src} height={"24rem"} width={"24rem"}></img>
+                <StyledImg src={target.src} />
                 <p> - {t(target.text)}</p>
               </StyledTargetsRow>
             ))}
