@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { mapActions } from "../features/map/mapSlice";
 import { useDispatch } from "react-redux";
+import { targetsImg } from "../data/img";
 
 type ModalWindowProps = {
   onClick: () => void;
@@ -115,56 +116,6 @@ function InfoModalWindow({ header, onClick, text }: ModalWindowProps) {
     onClick();
   };
 
-  const targets = [
-    {
-      //1
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/commandCenter.png",
-      text: "comandCenter",
-    },
-    {
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/researchFacility.png",
-      text: "researchFacility",
-    },
-    {
-      //2
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/armyBase.png",
-      text: "armyBase",
-    },
-    {
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/airField.png",
-      text: "airfield",
-    },
-    {
-      //3
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/navalBase.webp",
-      text: "navalBase",
-    },
-
-    {
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/port.png",
-      text: "port",
-    },
-    {
-      //4
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/airBase.png",
-      text: "airbase",
-    },
-
-    {
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/oilAndGasFacilities.png",
-      text: "oilAndGasFacility",
-    },
-    {
-      //5
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/militaryFactory.png",
-      text: "militaryFactory",
-    },
-    {
-      src: "https://raw.githubusercontent.com/RomchikSt/target-map/master/public/img/otherTarget.png",
-      text: "otherTargets",
-    },
-  ];
-
   return (
     <ModalBackground onClick={onClick}>
       <ModalBox onClick={handleModalContainerClick}>
@@ -185,7 +136,7 @@ function InfoModalWindow({ header, onClick, text }: ModalWindowProps) {
             </StyledTargetsRow>
           </StyledMainTargetContainer>
           <StyledTargetContainer>
-            {targets.map((target) => (
+            {targetsImg.map((target) => (
               <StyledTargetsRow key={target.text}>
                 <img src={target.src} height={"24rem"} width={"24rem"}></img>
                 <p> - {t(target.text)}</p>

@@ -21,6 +21,7 @@ import InfoModalWindow from "../ui/InfoModalWindow";
 import { useEffect, useState } from "react";
 import GeoLoader from "../ui/GeoLoader";
 import { GiNuclearBomb } from "react-icons/gi";
+import SettingsModalWindow from "../ui/SettingsModalWindow";
 
 const PageContainer = styled.div`
   position: relative;
@@ -151,17 +152,15 @@ function TargetsPage() {
           width={"28rem"}
         ></img>
       </StandartMapButton>
-      {/* <StandartMapButton
-        zIndex={settingsOpen ? 9999 : 1000}
+      <StandartMapButton
+        zIndex={1000}
         bottom={"17rem"}
         right={"2rem"}
         onClick={handleOpenSettings}
       >
         <LuSettings2 size={"2.2rem"} />
-      </StandartMapButton> */}
-      {/* {settingsOpen && (
-        <ModalWindow onClick={handleOpenSettings} header={t("settings")} />
-      )} */}
+      </StandartMapButton>
+      {settingsOpen && <SettingsModalWindow />}
       <StandartMapButton
         bottom={"12rem"}
         right={"2rem"}

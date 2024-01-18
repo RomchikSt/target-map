@@ -37,12 +37,7 @@ type SearchInputProps = {
   bottom?: string;
 };
 
-function SearchInput({
-  top,
-  left,
-  right,
-  bottom /* onClick */,
-}: SearchInputProps) {
+function SearchInput({ top, left, right, bottom }: SearchInputProps) {
   const { t } = useTranslation();
   return (
     <SearchContainer
