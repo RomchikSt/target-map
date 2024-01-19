@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const CheckboxWrapper = styled.div`
-  /* input[type="checkbox"] {
+  input[type="checkbox"] {
     display: none;
-  } */
+  }
 
   .checkbox__label {
     width: 1.4rem;
@@ -30,7 +30,7 @@ const CheckboxWrapper = styled.div`
       height: 1.4rem;
       width: 1.4rem;
       border: calc(1.4rem * 0.14) solid #000;
-      transition: 200ms;
+      transition: all 0.3s ease-in-out;
       position: absolute;
       top: calc(6rem * 0.125);
       left: 0;
