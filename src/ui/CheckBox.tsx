@@ -10,6 +10,7 @@ const CheckboxContainer = styled.div`
     display: inline-block;
     width: calc(var(--size, 1) * 1.8rem);
     position: relative;
+    margin-top: 0.5rem;
   }
 
   .checkbox:after {
