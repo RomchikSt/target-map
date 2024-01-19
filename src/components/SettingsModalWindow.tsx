@@ -38,7 +38,7 @@ const StyledSettingsContainer = styled(motion.div)`
 
 const StyledTargetsRow = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 `;
 
 const StyledImg = styled.img`
