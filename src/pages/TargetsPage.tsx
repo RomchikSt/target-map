@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Map from "../components/Map";
 import TopLeftButtons from "../components/TopLeftButtons";
-import TopRightsButtons from "../components/TopRightsButtons";
+import TopRightsButtons from "../components/TopRightButtons";
 import BottomRightButtons from "../components/BottomRightButtons";
 
 const PageContainer = styled.div`

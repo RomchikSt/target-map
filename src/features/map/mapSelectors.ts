@@ -1,5 +1,7 @@
 import { RootState } from "../../store/store";
 
+export const selectCoordinates = (state: RootState) => state.map.position;
+
 export const selectZoom = (state: RootState) => state.map.zoom;
 
 export const selectFilter = (state: RootState) => state.map.filter;

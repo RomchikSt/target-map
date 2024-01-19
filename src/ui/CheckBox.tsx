@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const CheckboxWrapper = styled.div`
   input[type="checkbox"] {
-    visibility: hidden;
     display: none;
   }
 

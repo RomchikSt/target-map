@@ -21,7 +21,7 @@ const StyledImage = styled.img`
   padding: 0.4rem;
 `;
 
-function TopRightsButtons() {
+function TopRightButtons() {
   const { i18n, t } = useTranslation();
   const dispatch = useDispatch();
   const language = useSelector(selectLanguage);
@@ -77,4 +77,4 @@ function TopRightsButtons() {
   );
 }
 
-export default TopRightsButtons;
+export default TopRightButtons;
