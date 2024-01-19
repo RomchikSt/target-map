@@ -1,7 +1,5 @@
-import React from "react";
 import styled from "styled-components";
 
-// Стилізований контейнер для чекбоксу
 const CheckboxContainer = styled.div`
   .checkbox {
     --bg: transperent;
